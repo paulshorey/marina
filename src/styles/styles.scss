@@ -1,0 +1,41 @@
+a,
+.link {
+  color: inherit;
+}
+a,
+.link {
+  text-decoration: underline;
+  * {
+    text-decoration: underline;
+  }
+  &:hover,
+  &:hover * {
+    text-decoration: none;
+  }
+}
+a,
+.link,
+.clickable {
+  cursor: pointer;
+}
+
+.githubTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  svg {
+    cursor: pointer;
+    path:first-child {
+      fill: hsl(39deg 97% 47%);
+    }
+  }
+  label {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    bottom: 7px;
+    left: -4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
