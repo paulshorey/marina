@@ -1,6 +1,6 @@
 import Head from "next/head";
 import aggregateBaseRows from "lib/promise/aggregateBaseRows";
-import HomeProducts from "src/components/templates/HomeProducts";
+import ContactSchedule from "src/components/templates/ContactSchedule";
 
 /**
  * Render homepage
@@ -13,7 +13,7 @@ export default function Home(props) {
       <Head>
         <title>Marina's site</title>
       </Head>
-      <HomeProducts {...props} />
+      <ContactSchedule {...props} />
     </>
   );
 }
@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
   // aggregate rows
   await (async () => {
-    return [await aggregateBaseRows("site", rows), await aggregateBaseRows("home", rows)];
+    return [await aggregateBaseRows("site", rows), await aggregateBaseRows("schedule", rows)];
   })();
 
   // return aggregate rows

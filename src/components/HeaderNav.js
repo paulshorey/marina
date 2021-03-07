@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function HeaderNav({ rows = {} }) {
   if (!rows["logo"]) {
@@ -7,24 +8,34 @@ export default function HeaderNav({ rows = {} }) {
   }
   let styles = {
     header: {
-      backgroundColor: rows["bg color"].text
+      backgroundColor: rows["bg color"].value
     },
     nav: {
-      backgroundColor: rows["bg color"].text
+      backgroundColor: rows["bg color"].value
     }
   };
   return (
     <Styled className="HeaderNav" style={styles.header}>
       <span className="nav left" style={styles.nav}>
-        <a>RTT</a>
-        <a>COACHING</a>
+        <Link href="/rtt">
+          <a>RTT</a>
+        </Link>
+        <Link href="/coaching">
+          <a>COACHING</a>
+        </Link>
       </span>
-      <a className="logo" href="/">
-        <img src={rows["logo"].image[0].url} alt="logo" />
-      </a>
+      <Link href="/">
+        <a className="logo" href="/">
+          <img src={rows["logo"].image[0].url} alt="logo" />
+        </a>
+      </Link>
       <span className="nav right" style={styles.nav}>
-        <a>ABOUT</a>
-        <a>CONTACT</a>
+        <Link href="/faq">
+          <a>FAQ</a>
+        </Link>
+        <Link href="/contact">
+          <a>SCHEDULE</a>
+        </Link>
       </span>
     </Styled>
   );
