@@ -27,7 +27,7 @@
     "next-images": "^1.7.0",
     "puppeteer": "^5.5.0"
   },
-  "husky": {
+  "xhusky": {
     "hooks": {
       "pre-commit": "npm run test_build"
     }

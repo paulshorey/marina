@@ -26,6 +26,10 @@ const Styled = styled.div`
         &:last-child {
           padding-right: 0;
         }
+
+        h3 {
+          color: #fff;
+        }
       }
     }
   }
@@ -68,6 +72,8 @@ const Styled = styled.div`
       }
 
       .quote {
+        font-family: "Caveat", sans-serif;
+        font-size: 1.67rem;
         flex: 1 0 0;
         padding: 1rem 2rem;
         margin: 0;
@@ -133,7 +139,9 @@ export default function Template({ rows = {} }) {
         <div className="products">
           <div className="content">
             <article className="product">
-              <h3>{rows["product 1"].title}</h3>
+              <a className="" href={rows["product 1"].linkUrl}>
+                <h3>{rows["product 1"].title}</h3>
+              </a>
               <ReactMarkdown className="ReactMarkdown">{rows["product 1"].text}</ReactMarkdown>
               <p>
                 <a className="button" href={rows["product 1"].linkUrl}>
@@ -143,7 +151,9 @@ export default function Template({ rows = {} }) {
             </article>
 
             <article className="product">
-              <h3>{rows["product 2"].title}</h3>
+              <a className="" href={rows["product 2"].linkUrl}>
+                <h3>{rows["product 2"].title}</h3>
+              </a>
               <ReactMarkdown className="ReactMarkdown">{rows["product 2"].text}</ReactMarkdown>
               <p>
                 <a className="button" href={rows["product 2"].linkUrl}>
