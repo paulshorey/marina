@@ -10,6 +10,16 @@ import HeaderNav from "src/components/HeaderNav";
  * Styles
  */
 const Styled = styled.div`
+  h2 {
+    font-size: 1.25rem;
+  }
+  a h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
   .products {
     background: rgb(148, 193, 189);
     color: white;
@@ -23,11 +33,16 @@ const Styled = styled.div`
         display: inline-block;
         padding: 1rem 1.5rem 1rem 0;
         min-width: 200px;
+        width: 50%;
         &:last-child {
           padding-right: 0;
         }
 
-        h3 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
           color: #fff;
         }
       }
@@ -79,6 +94,10 @@ const Styled = styled.div`
         margin: 0;
         color: #222;
         text-indent: 2px;
+        text-shadow: 0 0 44px white;
+        a {
+          color: hsl(200deg 90% 50%);
+        }
       }
     }
   }
@@ -140,7 +159,7 @@ export default function Template({ rows = {} }) {
           <div className="content">
             <article className="product">
               <a className="" href={rows["product 1"].linkUrl}>
-                <h3>{rows["product 1"].title}</h3>
+                <h2>{rows["product 1"].title}</h2>
               </a>
               <ReactMarkdown className="ReactMarkdown">{rows["product 1"].text}</ReactMarkdown>
               <p>
@@ -152,7 +171,7 @@ export default function Template({ rows = {} }) {
 
             <article className="product">
               <a className="" href={rows["product 2"].linkUrl}>
-                <h3>{rows["product 2"].title}</h3>
+                <h2>{rows["product 2"].title}</h2>
               </a>
               <ReactMarkdown className="ReactMarkdown">{rows["product 2"].text}</ReactMarkdown>
               <p>

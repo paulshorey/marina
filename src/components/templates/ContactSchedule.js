@@ -8,6 +8,9 @@ import propertyOf from "lib/function/propertyOf";
 import HeaderNav from "src/components/HeaderNav";
 import Newsletter from "../Newsletter";
 
+import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
+import { faRocket } from "@fortawesome/free-solid-svg-icons/faRocket";
+
 /*
  * Styles
  */
@@ -74,7 +77,7 @@ export default function Template({ rows = {} }) {
           <div className="products">
             {products.map((product) => (
               <a className="product" href={`?calendar=${product.linkUrl}`}>
-                {product.linkText}
+                <FA icon={faRocket} /> {product.linkText}
               </a>
             ))}
           </div>
