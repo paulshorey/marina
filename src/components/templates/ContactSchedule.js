@@ -1,7 +1,7 @@
 // import { http_get } from "@twodashes/node/cjs/requests";
 // import { sort_objects_by_property } from "@twodashes/universal/umd/sort_objects";
 import { useRouter } from "next/router";
-// import a from "next/a";
+// import a from "next/link";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import propertyOf from "lib/function/propertyOf";

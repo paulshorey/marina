@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import a from "next/a";
+// import a from "next/link";
 
 const Styled = styled.div`
   .form {
