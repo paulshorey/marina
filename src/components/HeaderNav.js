@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import a from "next/link";
+// import a from "next/link";
 
 export default function HeaderNav({ rows = {} }) {
   if (!rows["logo"]) {
@@ -17,12 +17,8 @@ export default function HeaderNav({ rows = {} }) {
   return (
     <Styled className="HeaderNav" style={styles.header}>
       <span className="nav left" style={styles.nav}>
-        <a href="/rtt">
-          <a>RTT</a>
-        </a>
-        <a href="/coaching">
-          <a>COACHING</a>
-        </a>
+        <a href="/rtt">RTT</a>
+        <a href="/coaching">COACHING</a>
       </span>
       <a href="/">
         <a className="logo" href="/">
@@ -30,12 +26,8 @@ export default function HeaderNav({ rows = {} }) {
         </a>
       </a>
       <span className="nav right" style={styles.nav}>
-        <a href="/faq">
-          <a>FAQ</a>
-        </a>
-        <a href="/contact">
-          <a>SCHEDULE</a>
-        </a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">SCHEDULE</a>
       </span>
     </Styled>
   );
