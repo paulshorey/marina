@@ -20,10 +20,8 @@ export default function HeaderNav({ rows = {} }) {
         <a href="/rtt">RTT</a>
         <a href="/coaching">COACHING</a>
       </span>
-      <a href="/">
-        <a className="logo" href="/">
-          <img src={rows["logo"].image[0].url} alt="logo" />
-        </a>
+      <a className="logo" href="/">
+        <img src={rows["logo"].image[0].url} alt="logo" />
       </a>
       <span className="nav right" style={styles.nav}>
         <a href="/faq">FAQ</a>

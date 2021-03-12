@@ -76,8 +76,8 @@ export default function Template({ rows = {} }) {
           {/*{!!rows["main"].text && <ReactMarkdown className="ReactMarkdown">{rows["main"].text}</ReactMarkdown>}*/}
           <div className="products">
             {products.map((product) => (
-              <a className="product" href={`?calendar=${product.aUrl}`}>
-                <FA icon={faRocket} /> {product.aText}
+              <a className="product" href={`?calendar=${product.linkUrl}`}>
+                <FA icon={faRocket} /> {product.linkText}
               </a>
             ))}
           </div>
