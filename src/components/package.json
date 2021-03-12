@@ -2,7 +2,7 @@
   "name": "components",
   "type": "module",
   "version": "0.0.1",
-  "description": "Local module, import as a node module path. Install with `npm link ./path/to/here`",
+  "description": "Local module, import as a node module path. Install with `npm a ./path/to/here`",
   "private": true,
   "dependencies": {},
   "devDependencies": {}

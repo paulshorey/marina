@@ -138,8 +138,8 @@ export default function Template({ rows = {} }) {
 
               {!!rows["consultation"] && (
                 <p>
-                  <a className="button" href={rows["consultation"].linkUrl}>
-                    {rows["consultation"].linkText}
+                  <a className="button" href={rows["consultation"].aUrl}>
+                    {rows["consultation"].aText}
                   </a>
                 </p>
               )}
@@ -158,25 +158,25 @@ export default function Template({ rows = {} }) {
         <div className="products">
           <div className="content">
             <article className="product">
-              <a className="" href={rows["product 1"].linkUrl}>
+              <a className="" href={rows["product 1"].aUrl}>
                 <h2>{rows["product 1"].title}</h2>
               </a>
               <ReactMarkdown className="ReactMarkdown">{rows["product 1"].text}</ReactMarkdown>
               <p>
-                <a className="button" href={rows["product 1"].linkUrl}>
-                  {rows["product 1"].linkText}
+                <a className="button" href={rows["product 1"].aUrl}>
+                  {rows["product 1"].aText}
                 </a>
               </p>
             </article>
 
             <article className="product">
-              <a className="" href={rows["product 2"].linkUrl}>
+              <a className="" href={rows["product 2"].aUrl}>
                 <h2>{rows["product 2"].title}</h2>
               </a>
               <ReactMarkdown className="ReactMarkdown">{rows["product 2"].text}</ReactMarkdown>
               <p>
-                <a className="button" href={rows["product 2"].linkUrl}>
-                  {rows["product 2"].linkText}
+                <a className="button" href={rows["product 2"].aUrl}>
+                  {rows["product 2"].aText}
                 </a>
               </p>
             </article>

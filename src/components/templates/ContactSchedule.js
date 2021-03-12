@@ -1,7 +1,7 @@
 // import { http_get } from "@twodashes/node/cjs/requests";
 // import { sort_objects_by_property } from "@twodashes/universal/umd/sort_objects";
 import { useRouter } from "next/router";
-// import Link from "next/link";
+// import a from "next/a";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import propertyOf from "lib/function/propertyOf";
@@ -76,8 +76,8 @@ export default function Template({ rows = {} }) {
           {/*{!!rows["main"].text && <ReactMarkdown className="ReactMarkdown">{rows["main"].text}</ReactMarkdown>}*/}
           <div className="products">
             {products.map((product) => (
-              <a className="product" href={`?calendar=${product.linkUrl}`}>
-                <FA icon={faRocket} /> {product.linkText}
+              <a className="product" href={`?calendar=${product.aUrl}`}>
+                <FA icon={faRocket} /> {product.aText}
               </a>
             ))}
           </div>
