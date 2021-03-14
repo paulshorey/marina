@@ -19,11 +19,13 @@ export default function HeaderNav({ rows = {} }) {
       <span className="nav left" style={styles.nav}>
         <a href="/rtt">RTT</a>
         <a href="/coaching">COACHING</a>
+        <a href="/">HOME</a>
       </span>
       <a className="logo" href="/">
         <img src={rows["logo"].image[0].url} alt="logo" />
       </a>
       <span className="nav right" style={styles.nav}>
+        <a href="/about">ABOUT</a>
         <a href="/faq">FAQ</a>
         <a href="/contact">SCHEDULE</a>
       </span>

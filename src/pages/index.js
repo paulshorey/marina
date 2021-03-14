@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 import aggregateBaseRows from "lib/promise/aggregateBaseRows";
 import HomeProducts from "src/components/templates/HomeProducts";
 
@@ -10,9 +10,9 @@ import HomeProducts from "src/components/templates/HomeProducts";
 export default function Home(props) {
   return (
     <>
-      <Head>
-        <title>Marina's site</title>
-      </Head>
+      {/*<Head>*/}
+      {/*  <title>Marina's site</title>*/}
+      {/*</Head>*/}
       <HomeProducts {...props} />
     </>
   );

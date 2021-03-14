@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>Therapy and Coaching | Marina V Mercado</title>
         <a rel="icon" href="/favicon/favicon.ico" />
       </Head>
 

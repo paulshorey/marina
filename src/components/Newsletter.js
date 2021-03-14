@@ -3,6 +3,7 @@ import styled from "styled-components";
 // // import a from "next/link";
 
 const Styled = styled.div`
+  margin:3rem auto;
   .form {
     padding: 1.5rem 1.5rem 3rem;
     text-align: center;
@@ -42,7 +43,7 @@ export default function Newsletter({ rows }) {
         target="_blank"
         noValidate
       >
-        <div className="form">
+        <div className="form" >
           {!!rows["newsletter signup title"] && <h3>{rows["newsletter signup title"].value}</h3>}
           <div className="fields">
             <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" placeholder="Your Email" />

@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 import aggregateBaseRows from "lib/promise/aggregateBaseRows";
 import ContactSchedule from "src/components/templates/ContactSchedule";
 
@@ -10,9 +10,9 @@ import ContactSchedule from "src/components/templates/ContactSchedule";
 export default function Home(props) {
   return (
     <>
-      <Head>
-        <title>Marina's site</title>
-      </Head>
+      {/*<Head>*/}
+      {/*  <title>Marina's site</title>*/}
+      {/*</Head>*/}
       <ContactSchedule {...props} />
     </>
   );

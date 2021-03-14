@@ -18,6 +18,7 @@ const Styled = styled.div`
   background: #fbfcfd;
   min-height: 100vh;
   .main {
+    min-height: 40vh;
     padding-top: 0.75rem;
 
     .products {
@@ -75,20 +76,20 @@ export default function Template({ rows = {} }) {
           {!!rows["main"].title && <h2>{rows["main"].title}</h2>}
           {/*{!!rows["main"].text && <ReactMarkdown className="ReactMarkdown">{rows["main"].text}</ReactMarkdown>}*/}
           <div className="products">
-            {products.map((product) => (
-              <a className="product" href={`?calendar=${product.linkUrl}`}>
+            {products.map((product, pi) => (
+              <a key={pi} className="product" href={`?calendar=${product.linkUrl}`}>
                 <FA icon={faRocket} /> {product.linkText}
               </a>
             ))}
           </div>
         </div>
-      </div>
 
-      {!!router.query.calendar && (
-        <div className="calendar">
-          <iframe src={router.query.calendar} />
-        </div>
-      )}
+        {!!router.query.calendar && (
+          <div className="calendar">
+            <iframe src={router.query.calendar} />
+          </div>
+        )}
+      </div>
 
       <Newsletter rows={rows} />
     </Styled>
