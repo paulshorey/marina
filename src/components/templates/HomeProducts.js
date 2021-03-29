@@ -15,6 +15,7 @@ const Styled = styled.div`
   }
   a h2 {
     font-size: 1.5rem;
+    font-weight: normal;
   }
   h3 {
     font-size: 1rem;
@@ -95,10 +96,19 @@ const Styled = styled.div`
         color: #222;
         text-indent: 2px;
         text-shadow: 0 0 44px white;
+        color: hsl(200deg 42% 27%);
         a {
           color: hsl(200deg 90% 50%);
         }
       }
+      h2 .quote {
+        padding-left: 0;
+        margin-left: -2px;
+        color: hsl(200deg 42% 47%);
+      }
+    }
+
+    .cta {
     }
   }
 `;
@@ -133,6 +143,11 @@ export default function Template({ rows = {} }) {
           <div className="main">
             <div className="text">
               {!!rows["main"].title && <h2>{rows["main"].title}</h2>}
+              {!rows["main"].title && !!rows["quote"].title && (
+                <h2>
+                  <span className="quote">{rows["quote"].title}</span>
+                </h2>
+              )}
 
               <ReactMarkdown className="ReactMarkdown">{rows["main"].text}</ReactMarkdown>
 
@@ -140,6 +155,14 @@ export default function Template({ rows = {} }) {
                 <p>
                   <a className="button" href={rows["consultation"].linkUrl}>
                     {rows["consultation"].linkText}
+                  </a>
+                </p>
+              )}
+
+              {!!rows["main"].linkText && (
+                <p className="cta">
+                  <a className="button" href={rows["main"].linkUrl}>
+                    {rows["main"].linkText}
                   </a>
                 </p>
               )}
@@ -154,32 +177,36 @@ export default function Template({ rows = {} }) {
         </section>
       </div>
 
-      {!!rows["product 1"] && !!rows["product 2"] && (
+      {(!!rows["product 1"] || !!rows["product 2"]) && (
         <div className="products">
           <div className="content">
-            <article className="product">
-              <a className="" href={rows["product 1"].linkUrl}>
-                <h2>{rows["product 1"].title}</h2>
-              </a>
-              <ReactMarkdown className="ReactMarkdown">{rows["product 1"].text}</ReactMarkdown>
-              <p>
-                <a className="button" href={rows["product 1"].linkUrl}>
-                  {rows["product 1"].linkText}
+            {!!rows["product 1"] && (
+              <article className="product">
+                <a className="" href={rows["product 1"].linkUrl}>
+                  <h2>{rows["product 1"].title}</h2>
                 </a>
-              </p>
-            </article>
+                <ReactMarkdown className="ReactMarkdown">{rows["product 1"].text}</ReactMarkdown>
+                <p>
+                  <a className="button" href={rows["product 1"].linkUrl}>
+                    {rows["product 1"].linkText}
+                  </a>
+                </p>
+              </article>
+            )}
 
-            <article className="product">
-              <a className="" href={rows["product 2"].linkUrl}>
-                <h2>{rows["product 2"].title}</h2>
-              </a>
-              <ReactMarkdown className="ReactMarkdown">{rows["product 2"].text}</ReactMarkdown>
-              <p>
-                <a className="button" href={rows["product 2"].linkUrl}>
-                  {rows["product 2"].linkText}
+            {!!rows["product 2"] && (
+              <article className="product">
+                <a className="" href={rows["product 2"].linkUrl}>
+                  <h2>{rows["product 2"].title}</h2>
                 </a>
-              </p>
-            </article>
+                <ReactMarkdown className="ReactMarkdown">{rows["product 2"].text}</ReactMarkdown>
+                <p>
+                  <a className="button" href={rows["product 2"].linkUrl}>
+                    {rows["product 2"].linkText}
+                  </a>
+                </p>
+              </article>
+            )}
           </div>
         </div>
       )}

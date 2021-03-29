@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
   // aggregate rows
   await (async () => {
-    return [await aggregateBaseRows("site", rows), await aggregateBaseRows("faq", rows)];
+    return [await aggregateBaseRows("site", rows), await aggregateBaseRows("about", rows)];
   })();
 
   // return aggregate rows

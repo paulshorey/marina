@@ -61,6 +61,10 @@ export default function Template({ rows = {} }) {
       products.push(rows["product " + n]);
     }
   }
+  let calendarUrl = router.query.calendar;
+  if (!calendarUrl && products[0]) {
+    calendarUrl = products[0].linkUrl;
+  }
   return (
     <Styled>
       <HeaderNav rows={rows} />
@@ -84,9 +88,9 @@ export default function Template({ rows = {} }) {
           </div>
         </div>
 
-        {!!router.query.calendar && (
+        {!!calendarUrl && (
           <div className="calendar">
-            <iframe src={router.query.calendar} />
+            <iframe src={calendarUrl} />
           </div>
         )}
       </div>
