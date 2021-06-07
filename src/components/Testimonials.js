@@ -59,7 +59,7 @@ const Styled = styled.nav`
   text-align: center;
 
   h3 {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
 
   p {

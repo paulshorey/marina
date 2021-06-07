@@ -20,7 +20,7 @@ export default function Certifications({ rows = {} }) {
 
 const Styled = styled.nav`
   max-width: 1000px;
-  margin: 25px auto 100px;
+  margin: 35px auto 75px;
   text-align: center;
 
   h3 {
