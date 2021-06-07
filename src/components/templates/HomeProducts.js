@@ -108,9 +108,9 @@ export default function Template({ rows = {} }) {
 
       <Newsletter rows={rows} />
 
-      <Testimonials rows={rows} />
-
       <Certifications rows={rows} />
+
+      <Testimonials rows={rows} />
     </Styled>
   );
 }
