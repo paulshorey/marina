@@ -5,113 +5,7 @@ import styled from "styled-components";
 import propertyOf from "lib/function/propertyOf";
 import Newsletter from "src/components/Newsletter";
 import HeaderNav from "src/components/HeaderNav";
-
-/*
- * Styles
- */
-const Styled = styled.div`
-  h2 {
-    font-size: 1.25rem;
-  }
-  a h2 {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-
-  .products {
-    background: rgb(148, 193, 189);
-    color: white;
-    .content {
-      display: flex;
-      padding: 1.5rem 0;
-      @media (max-width: 500px) {
-        display: block;
-      }
-      .product {
-        display: inline-block;
-        padding: 1rem 1.5rem 1rem 0;
-        min-width: 200px;
-        width: 50%;
-        &:last-child {
-          padding-right: 0;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  .about {
-    margin: 0 0 1.5rem;
-    display: flex;
-    position: relative;
-    @media (max-width: 800px) {
-      display: block;
-    }
-
-    .image {
-      height: 400px;
-      padding: 1.5rem 0 0;
-      background: white;
-
-      img {
-        height: 100%;
-        width: auto;
-      }
-    }
-
-    .main {
-      display: flex;
-      flex-direction: column;
-
-      .text {
-        color: #787878;
-        background: white;
-        padding: 1rem 2rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        @media (max-width: 800px) {
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-
-      .quote {
-        font-family: "Caveat", sans-serif;
-        font-size: 1.67rem;
-        flex: 1 0 0;
-        padding: 1rem 2rem;
-        margin: 0;
-        color: #222;
-        text-indent: 2px;
-        text-shadow: 0 0 44px white;
-        color: hsl(200deg 42% 27%);
-        a {
-          color: hsl(200deg 90% 50%);
-        }
-      }
-      h2 .quote {
-        padding-left: 0;
-        margin-left: -2px;
-        color: hsl(200deg 42% 47%);
-      }
-    }
-
-    .cta {
-    }
-  }
-`;
+import Footer from "src/components/Footer";
 
 /**
  * Render homepage
@@ -212,6 +106,123 @@ export default function Template({ rows = {} }) {
       )}
 
       <Newsletter rows={rows} />
+
+      <Footer rows={rows} />
     </Styled>
   );
 }
+
+
+/*
+ * Styles
+ */
+const Styled = styled.div`
+  h2 {
+	font-size: 1.25rem;
+  }
+
+  a h2 {
+	font-size: 1.5rem;
+	font-weight: normal;
+  }
+
+  h3 {
+	font-size: 1rem;
+  }
+
+  .products {
+	background: rgb(148, 193, 189);
+	color: white;
+
+	.content {
+	  display: flex;
+	  padding: 1.5rem 0;
+	  @media (max-width: 500px) {
+		display: block;
+	  }
+
+	  .product {
+		display: inline-block;
+		padding: 1rem 1.5rem 1rem 0;
+		min-width: 200px;
+		width: 50%;
+
+		&:last-child {
+		  padding-right: 0;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+		  color: #fff;
+		}
+	  }
+	}
+  }
+
+  .about {
+	margin: 0 0 1.5rem;
+	display: flex;
+	position: relative;
+	@media (max-width: 800px) {
+	  display: block;
+	}
+
+	.image {
+	  height: 400px;
+	  padding: 1.5rem 0 0;
+	  background: white;
+
+	  img {
+		height: 100%;
+		width: auto;
+	  }
+	}
+
+	.main {
+	  display: flex;
+	  flex-direction: column;
+
+	  .text {
+		color: #787878;
+		background: white;
+		padding: 1rem 2rem;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media (max-width: 800px) {
+		  padding-left: 0;
+		  padding-right: 0;
+		}
+	  }
+
+	  .quote {
+		font-family: "Caveat", sans-serif;
+		font-size: 1.67rem;
+		flex: 1 0 0;
+		padding: 1rem 2rem;
+		margin: 0;
+		color: #222;
+		text-indent: 2px;
+		text-shadow: 0 0 44px white;
+		color: hsl(200deg 42% 27%);
+
+		a {
+		  color: hsl(200deg 90% 50%);
+		}
+	  }
+
+	  h2 .quote {
+		padding-left: 0;
+		margin-left: -2px;
+		color: hsl(200deg 42% 47%);
+	  }
+	}
+
+	.cta {
+	}
+  }
+`;

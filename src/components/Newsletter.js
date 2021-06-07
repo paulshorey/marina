@@ -2,35 +2,6 @@ import React from "react";
 import styled from "styled-components";
 // // import a from "next/link";
 
-const Styled = styled.div`
-  margin:3rem auto;
-  .form {
-    padding: 1.5rem 1.5rem 3rem;
-    text-align: center;
-    h3 {
-      margin-bottom: -0.125rem;
-    }
-    .fields {
-      input {
-        display: inline-block;
-        padding: 0.33rem 0.5rem;
-        font-size: 1rem;
-        margin: 1.25rem 0.25rem 0 0.25rem;
-      }
-      input[type="email"] {
-        width: 300px;
-      }
-      input[type="text"] {
-        width: 150px;
-      }
-      input[type="submit"] {
-        padding: 0.5rem 1rem;
-        width: 200px;
-      }
-    }
-  }
-`;
-
 export default function Newsletter({ rows }) {
   return (
     <Styled id="mc_embed_signup">
@@ -62,3 +33,33 @@ export default function Newsletter({ rows }) {
     </Styled>
   );
 }
+
+
+const Styled = styled.div`
+  margin:3rem auto;
+  .form {
+    padding: 1.5rem 1.5rem 3rem;
+    text-align: center;
+    h3 {
+      margin-bottom: -0.125rem;
+    }
+    .fields {
+      input {
+        display: inline-block;
+        padding: 0.33rem 0.5rem;
+        font-size: 1rem;
+        margin: 1.25rem 0.25rem 0 0.25rem;
+      }
+      input[type="email"] {
+        width: 300px;
+      }
+      input[type="text"] {
+        width: 150px;
+      }
+      input[type="submit"] {
+        padding: 0.5rem 1rem;
+        width: 200px;
+      }
+    }
+  }
+`;
