@@ -6,14 +6,38 @@ export default function Certifications({ rows = {} }) {
   return (
     <Styled className="Certifications">
       {!!rows["certifications title"] && <h3>{rows["certifications title"].value}</h3>}
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037526/marina/cert-health-coach.jpg" alt="Health Coach" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037450/marina/life-coach.jpg" alt="Life Coach" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037393/marina/cert-transformational-coach.jpg" alt="Certified Transformational Coach" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037285/marina/cert-mastery-coach.png" alt="Certified Mastery Coach" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036109/marina/award-energy-medicine.png" alt="Insured Practitioner" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036089/marina/award-rtt.png" alt="RTT Certified" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036172/marina/award-american-business.jpg" alt="Stevie Gold American Business Award" />
-      <img src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036051/marina/award-international-business.jpg" alt="Stevie Gold International Business Award" />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037526/marina/cert-health-coach.jpg"
+        alt="Health Coach"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037450/marina/life-coach.jpg"
+        alt="Life Coach"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037393/marina/cert-transformational-coach.jpg"
+        alt="Certified Transformational Coach"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623037285/marina/cert-mastery-coach.png"
+        alt="Certified Mastery Coach"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036109/marina/award-energy-medicine.png"
+        alt="Insured Practitioner"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036089/marina/award-rtt.png"
+        alt="RTT Certified"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036172/marina/award-american-business.jpg"
+        alt="Stevie Gold American Business Award"
+      />
+      <img
+        src="https://res.cloudinary.com/dtscyrr9u/image/upload/w_180/v1623036051/marina/award-international-business.jpg"
+        alt="Stevie Gold International Business Award"
+      />
     </Styled>
   );
 }
@@ -24,16 +48,22 @@ const Styled = styled.nav`
   text-align: center;
 
   h3 {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
   }
 
   img {
-	margin: 15px;
-	vertical-align: center;
+    margin: 15px;
+    vertical-align: center;
 
-	&:last-of-type {
-	  margin-right: 0;
-	}
-
+    @media (min-width: 769px) {
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 `;

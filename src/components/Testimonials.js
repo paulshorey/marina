@@ -15,7 +15,9 @@ export default function Footer({ rows = {} }) {
           essential fats that fuel my brain as well as my body. I totally have a different attitude toward food and have
           been eating so much less without any conscious effort. It's working!
         </span>
-        <span><b>”</b> Debbie S.</span>
+        <span>
+          <b>”</b> Debbie S.
+        </span>
       </p>
 
       <p className="testimonial">
@@ -26,7 +28,9 @@ export default function Footer({ rows = {} }) {
           confidence and self-esteem. Now I am finding that my creativity and curiosity are at a whole new level! I am
           speaking up more in meetings and taking action steps every day toward my goals!
         </span>
-        <span><b>”</b> Jamie B.</span>
+        <span>
+          <b>”</b> Jamie B.
+        </span>
       </p>
 
       <p className="testimonial">
@@ -38,7 +42,9 @@ export default function Footer({ rows = {} }) {
           not bothering me anymore. As a result, it helps me to unwind my mind, to fall asleep fast, and stay asleep all
           through the night.
         </span>
-        <span><b>”</b> Lana S.</span>
+        <span>
+          <b>”</b> Lana S.
+        </span>
       </p>
 
       <p className="testimonial">
@@ -48,7 +54,9 @@ export default function Footer({ rows = {} }) {
           on this journey! Thank you so much, Marina! It's totally helping me feel more confident that everything will
           fall into place. I feel pretty calm and excited!
         </span>
-        <span><b>”</b> Emma H.</span>
+        <span>
+          <b>”</b> Emma H.
+        </span>
       </p>
     </Styled>
   );
@@ -67,8 +75,15 @@ const Styled = styled.nav`
     margin: 25px 50px;
     max-width: 500px;
 
-    &:last-of-type {
-      margin-right: 0;
+    @media (min-width: 769px) {
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     span:first-of-type {
@@ -76,15 +91,15 @@ const Styled = styled.nav`
     }
 
     span:last-of-type {
-      display:block;
+      display: block;
       color: #333;
       padding: 10px 15px;
     }
 
-	b {
-	  font-size: 200%;
-	  color: #666;
-	  line-height: 20px;
-	}
+    b {
+      font-size: 200%;
+      color: #666;
+      line-height: 20px;
+    }
   }
 `;
