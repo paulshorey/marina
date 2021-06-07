@@ -5,7 +5,8 @@ import styled from "styled-components";
 import propertyOf from "lib/function/propertyOf";
 import Newsletter from "src/components/Newsletter";
 import HeaderNav from "src/components/HeaderNav";
-import Footer from "src/components/Footer";
+import Certifications from "src/components/Certifications";
+import Testimonials from "src/components/Testimonials";
 
 /**
  * Render homepage
@@ -107,7 +108,9 @@ export default function Template({ rows = {} }) {
 
       <Newsletter rows={rows} />
 
-      <Footer rows={rows} />
+      <Testimonials rows={rows} />
+
+      <Certifications rows={rows} />
     </Styled>
   );
 }
