@@ -148,7 +148,7 @@ const Styled = styled.div`
 		display: inline-block;
 		padding: 1rem 1.5rem 1rem 0;
 		min-width: 200px;
-		width: 50%;
+		width: 100%;
 
 		&:last-child {
 		  padding-right: 0;
